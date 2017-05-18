@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".AboutPage" android:orientation="vertical">
+    <!-- App bar -->
+    <include layout="@layout/app_bar" android:id="@+id/app_bar" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:padding="5dp">
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Profile Info -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_3dp" android:id="@+id/llProfile">
+                <ImageView android:layout_width="150dp" android:layout_height="150dp"
+                    android:src="@drawable/about_pic"
+                    android:contentDescription="@string/name"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="6dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="@string/name" android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/text_color" android:gravity="start"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/career_status" android:layout_gravity="start"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/career"
+                        android:layout_gravity="start"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- About Information -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- Contact Information -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/tvContact" android:layout_marginBottom="10dp"
+                    android:paddingLeft="@dimen/margin_3dp" android:paddingEnd="@dimen/margin_3dp"
+                    android:text="@string/contact_info"
+                    android:paddingRight="@dimen/margin_3dp" />
+                <!-- Phone -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:weightSum="10">
+                    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_menu_call" android:layout_weight="8"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_weight="2" android:text="@string/phone_no"
+                        android:autoLink="phone" android:linksClickable="true"
+                        android:textColorLink="@color/profile_background"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                </LinearLayout>
+                <!-- Email -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:weightSum="10">
+                    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_dialog_email" android:layout_weight="8"
+                        android:contentDescription="@string/email" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_weight="2" android:text="@string/email_address"
+                        android:autoLink="email" android:linksClickable="true"
+                        android:textColorLink="@color/profile_background"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                </LinearLayout>
+                <!-- Facebook -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="30dp"
+                    android:orientation="horizontal" android:weightSum="10">
+                    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:src="@drawable/facebook_logo" android:layout_weight="8"
+                        android:contentDescription="@string/facebook" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_weight="2" android:text="@string/name"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                </LinearLayout>
+                <!-- Website -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="30dp"
+                    android:orientation="horizontal" android:weightSum="10">
+                    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_menu_mapmode" android:layout_weight="8"
+                        android:contentDescription="@string/website" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_weight="2" android:text="@string/website_url"
+                        android:autoLink="web" android:linksClickable="true"
+                        android:textColorLink="@color/profile_background"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                </LinearLayout>
+                <!-- Favorite Quote -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/fav_quote_title"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/button_text_size"
+                    android:layout_marginLeft="@dimen/button_text_size"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/fav_quote_body" android:textStyle="italic"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

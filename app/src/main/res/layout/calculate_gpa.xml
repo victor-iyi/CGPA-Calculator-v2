@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculateGPA"  android:background="@color/white">
+
+    <include layout="@layout/app_bar" android:id="@+id/app_bar"/>
+    <!-- Headings (Courses, Grades, Units) -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:weightSum="100"
+        android:layout_marginBottom="5dp" android:paddingTop="@dimen/twenty"
+        android:paddingRight="@dimen/twenty" android:paddingLeft="@dimen/twenty"
+        android:layout_below="@id/app_bar" android:id="@+id/llLabel">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_weight="20" android:text="@string/courses"
+            android:gravity="start"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_weight="40" android:text="@string/grade"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_weight="40" android:text="@string/unit"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+
+    <!-- Grades and Units Inputs -->
+    <include layout="@layout/calculate_gpa_inputs" />
+
+    <!-- Calculate and Reset Buttons -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:weightSum="100" android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_weight="50" android:text="@string/calculate" android:id="@+id/bCalculate"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_weight="50" android:text="@string/reset" android:id="@+id/bReset"
+            style="?android:attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+
+</RelativeLayout>

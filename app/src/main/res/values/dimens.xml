@@ -1,0 +1,20 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="text_size">14sp</dimen>
+    <dimen name="activity_overall_padding">5dp</dimen>
+    <dimen name="button_size">95dp</dimen>
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="padding_3dp">3dp</dimen>
+    <dimen name="result_margin">20dp</dimen>
+    <dimen name="result_text_size">45sp</dimen>
+    <dimen name="button_text_size">30sp</dimen>
+    <dimen name="box_height">30dp</dimen>
+    <dimen name="box_width">3dp</dimen>
+    <dimen name="result_text_padding">10dp</dimen>
+    <dimen name="nav_drawer_width">265dp</dimen>
+    <dimen name="list_padding">8dp</dimen>
+    <dimen name="padding_five_dp">5dp</dimen>
+    <dimen name="bottom">40dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="nav_img_width">250dp</dimen>
+</resources>

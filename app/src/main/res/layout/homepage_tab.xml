@@ -1,0 +1,37 @@
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.victoriyiola.cgpacalculator.Homepage"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="@dimen/activity_overall_padding"
+    android:id="@+id/tabHost">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent" android:layout_height="match_parent">
+            <!-- GPA Tab -->
+            <ScrollView
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:id="@+id/tabGPA" android:padding="@dimen/activity_overall_padding"
+                android:orientation="vertical">
+                <include layout="@layout/gpa_input_layout" />
+            </ScrollView>
+            <!-- CGPA Tab -->
+            <ScrollView
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:id="@+id/tabCGPA" android:padding="@dimen/activity_overall_padding"
+                android:orientation="vertical">
+                <include layout="@layout/cgpa_input_layout" />
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>

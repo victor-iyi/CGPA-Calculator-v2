@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.victoriyiola.cgpacalculator">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor">
+        <!-- Homepage -->
+        <activity android:name=".Homepage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- CalculateGPA Page -->
+        <activity
+            android:name=".CalculateGPA" android:label="@string/gpa_string" >
+        </activity>
+        <!-- CalculateCGPA Page -->
+        <activity
+            android:name=".CalculateCGPA" android:label="@string/cgpa_string" >
+        </activity>
+        <!-- SavedGPA Page -->
+        <activity
+            android:name=".SavedGPA" android:label="@string/saved_gpa" >
+        </activity>
+        <!-- SavedCGPA Page -->
+        <activity
+            android:name=".SavedCGPA" android:label="@string/saved_cgpa" >
+        </activity>
+        <!-- About Page -->
+        <activity
+            android:name=".AboutPage" android:label="@string/about_d_developer" >
+        </activity>
+    </application>
+
+</manifest>

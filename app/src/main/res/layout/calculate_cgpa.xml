@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CalculateCGPA">
+    <include layout="@layout/app_bar" android:id="@+id/app_bar"/>
+
+    <!-- Inputs -->
+    <include layout="@layout/calculate_cgpa_inputs" />
+
+    <!-- Calculate and Reset Buttons -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:weightSum="100" android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_weight="50" android:text="@string/calculate" android:id="@+id/bCalculate"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_weight="50" android:text="@string/reset" android:id="@+id/bReset"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+
+</RelativeLayout>
